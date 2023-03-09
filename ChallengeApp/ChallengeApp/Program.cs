@@ -1,69 +1,33 @@
-﻿int number = 5443;
-string numberAsString = number.ToString ();
-char[] letters = numberAsString.ToArray ();
+﻿using ChallengeApp;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
-int counter0 = 0;
-int counter1 = 0;
-int counter2 = 0;
-int counter3 = 0;
-int counter4 = 0;
-int counter5 = 0;
-int counter6 = 0;
-int counter7 = 0;
-int counter8 = 0;
-int counter9 = 0;
+User user1 = new User("Szymon", "321");  
+User user2 = new User("Małgorzata", "321");
+User user3 = new User("Zuzanna", "321");
+User user4 = new User("Magdalena", "321");
 
-foreach (char letter in letters)
-{
-    if(letter == '0')
-    {
-        counter0++;
-    }
-    else if (letter == '1')
-    {
-        counter1++;
-    }
-    else if (letter == '2')
-    {
-        counter2++;
-    }
-    else if (letter == '3')
-    {
-        counter3++;
-    }
-    else if (letter == '4')
-    {
-        counter4++;
-    }
-    else if (letter == '5')
-    {
-        counter5++;
-    }
-    else if (letter == '6')
-    {
-        counter6++;
-    }
-    else if (letter == '7')
-    {
-        counter7++;
-    }
-    else if (letter == '8')
-    {
-        counter8++;
-    }
-    else if (letter == '9')
-    {
-        counter9++;
-    }
-}
+user1.AddScore(5);
+user1.AddScore(2);
 
-Console.WriteLine(counter0);
-Console.WriteLine(counter1);
-Console.WriteLine(counter2);
-Console.WriteLine(counter3);
-Console.WriteLine(counter4);
-Console.WriteLine(counter5);
-Console.WriteLine(counter6);
-Console.WriteLine(counter7);
-Console.WriteLine(counter8);
-Console.WriteLine(counter9);
+var result = user1.Result;
+
+Console.WriteLine(result);
+
+var name = User.GameName;
+
+//namespace ChallengeApp;
+
+Employee employee1 = new Employee("Haber", "Wiesława", 65);
+Employee employee2 = new Employee("Wolan", "Magdalena", 36);
+Employee employee3 = new Employee("Wolan", "Maria", 10);
+
+employee1.AddPoints(5);
+employee1.AddPoints(2);
+employee1.AddPoints(1);
+employee1.AddPoints(3);
+employee1.AddPoints(7);
+
+int result1 = employee1.Points.Sum();
+
+
